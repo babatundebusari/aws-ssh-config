@@ -7,7 +7,7 @@ import boto.ec2
 AMIS_TO_USER = {
 	'amzn' : 'ec2-user',
 	'ubuntu' : 'ubuntu',
-	'CentOS' : 'root',
+	'CentOS' : 'ec2-user',
 	'DataStax' : 'ubuntu',
 	'CoreOS' : 'core'
 }
@@ -129,7 +129,7 @@ def main():
 				pass
 
 			print '    IdentityFile ~/.ssh/' + instance.key_name + '.pem'
-			print '    ProxyCommand ssh 'User'@awsbastion -W %h:%p
+			print '    ProxyCommand ssh `User`@awsbastion -W %h:%p
 			print '    StrictHostKeyChecking no' # just for me, removing this is usually a good choice
 			print
 

@@ -130,7 +130,7 @@ def main():
 
 #			print '    IdentityFile ~/.ssh/' + instance.key_name + '.pem'
                         print '    IdentityFile ~/.ssh/rax-private.pem'
-			print '    ProxyCommand ssh ' + amis[instance.image_id] + '@awsbastion -W %h:%p'
+			print '    ProxyCommand ssh ' + amis[instance.image_id] + '@52.73.26.63 -W %h:%p'
 			print '    StrictHostKeyChecking no' # just for me, removing this is usually a good choice
 			print
 

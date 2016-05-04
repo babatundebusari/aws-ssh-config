@@ -129,6 +129,7 @@ def main():
 				pass
 
 			print '    IdentityFile ~/.ssh/' + instance.key_name + '.pem'
+			print '    ProxyCommand ssh 'User'@awsbastion -W %h:%p
 			print '    StrictHostKeyChecking no' # just for me, removing this is usually a good choice
 			print
 
